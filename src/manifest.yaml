@@ -1,0 +1,24 @@
+common:
+ os: centos7
+ tools:
+   oracle-jdk: 8
+build:
+  tools:
+    oracle-jdk: 8
+    maven: 3.3.3
+  run:
+    workDir: .
+    cmd:
+      - mvn clean package -DskipTests -P$ENV
+  target:
+    distDir: study-demo/target
+    files:
+      - ./study-demo.jar
+      - ../../deploy/run.sh
+      - ../../deploy/check.sh
+autodeploy:
+  targetDir: /opt/xxx/apps/work
+  run: sh deploy/run.sh
+  check: sh deploy/check.sh
+  checkRetry: 60
+  checkInterval: 5s
