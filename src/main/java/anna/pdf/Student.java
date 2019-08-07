@@ -1,4 +1,4 @@
-package me.anna.pdf;
+package anna.pdf;
 
 import java.util.ArrayList;
 import java.util.List;
