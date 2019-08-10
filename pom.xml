@@ -26,6 +26,14 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>tools</artifactId>
+            <version>1.8</version>
+            <scope>system</scope>
+            <systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+            <optional>true</optional>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -113,7 +121,6 @@
             <version>3.0.0</version>
         </dependency>
         <!--pdf box end -->
-
     </dependencies>
 
     <build>
@@ -130,8 +137,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Premain-Class>me.shimanqiang.agent.InstrumentTest</Premain-Class>
-                            <Agent-Class>me.shimanqiang.agent.InstrumentTest</Agent-Class>
+                            <Premain-Class>me.shimanqiang.agent.AgentMain</Premain-Class>
+                            <Agent-Class>me.shimanqiang.agent.AgentMain</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                             <Can-Set-Native-Method-Prefix>true</Can-Set-Native-Method-Prefix>
