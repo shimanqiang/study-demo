@@ -4,18 +4,21 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.nio.ByteBuffer;
-import java.nio.channels.*;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author shimanqiang
+ * @author x
  * @since 2019/6/12 19:25
  */
-public class NioServer {
+public class NIOServer2 {
     public static void main(String[] args) throws Exception {
-        new NioServer().start(4321);
+        new NIOServer2().start(4321);
     }
 
     public void start(int port) throws IOException {
