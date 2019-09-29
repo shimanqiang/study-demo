@@ -29,7 +29,7 @@ public class ReadPdfInfo {
         initData();
 
 
-        String baseTarget = "主班教学双周计划_" + "2019年6月_" + "3周_4周_";
+        String baseTarget = "主班教学双周计划_" + "2019年9月_" + "1周_2周_";
 
         int index = 0;
         List<Student> stdList = new ArrayList<>();
@@ -38,7 +38,13 @@ public class ReadPdfInfo {
             student.setPracticalLifeList(randomData(PracticalLifeList));
             student.setSensorialList(randomData(SensorialList));
             student.setLanguageList(randomData(LanguageList));
-            student.setMathematicsList(randomData(MathematicsList));
+            if (student.getAge() == 3) {
+                student.setMathematicsList(randomData(MathematicsList3Age));
+            } else if (student.getAge() == 4) {
+                student.setMathematicsList(randomData(MathematicsList4Age));
+            } else {
+                student.setMathematicsList(randomData(MathematicsList));
+            }
             student.setCultureList(randomData(CultureList));
             student.setObservationList(randomData(ObservationList));
             stdList.add(student);
@@ -89,6 +95,8 @@ public class ReadPdfInfo {
         initPracticalLifeData();
         initSensorialData();
         initLanguageData();
+        initMathematicsData3Age();
+        initMathematicsData4Age();
         initMathematicsData();
         initCultureData();
         initObservationData();
@@ -103,6 +111,8 @@ public class ReadPdfInfo {
     //初始化语言
     private static List<String> LanguageList = new ArrayList<>();
     //初始化数学
+    private static List<String> MathematicsList3Age = new ArrayList<>();
+    private static List<String> MathematicsList4Age = new ArrayList<>();
     private static List<String> MathematicsList = new ArrayList<>();
     //初始化文化
     private static List<String> CultureList = new ArrayList<>();
@@ -111,25 +121,30 @@ public class ReadPdfInfo {
 
     public static void initStudentData() throws Exception {
 
-        StudentList.add(new Student("杨依诺", 5));
-        StudentList.add(new Student("王语墨", 5));
-        StudentList.add(new Student("李世其", 5));
-        StudentList.add(new Student("王泽翰", 5));
+        StudentList.add(new Student("周元媛", 5));
         StudentList.add(new Student("徐朗", 5));
+        StudentList.add(new Student("王骏道", 5));
         StudentList.add(new Student("赵昕宸", 5));
         StudentList.add(new Student("颜语希", 5));
-        StudentList.add(new Student("刘小禾", 4));
-        StudentList.add(new Student("蔡家宇", 4));
-        StudentList.add(new Student("张珺贺", 4));
-        StudentList.add(new Student("孙童瑶", 4));
-        StudentList.add(new Student("戴艺璇", 3));
-        StudentList.add(new Student("邓婉馨", 4));
-        StudentList.add(new Student("王玄同", 3));
-        StudentList.add(new Student("赵辰逸", 3));
-        StudentList.add(new Student("王骏道", 5));
-        StudentList.add(new Student("邓诗彤", 3));
-        StudentList.add(new Student("唐嘉良", 3));
-
+        StudentList.add(new Student("刘小禾", 5));
+        StudentList.add(new Student("李怡鑫", 5));
+        StudentList.add(new Student("蔡家宇", 5));
+        StudentList.add(new Student("王浩宇", 5));
+        StudentList.add(new Student("孙童瑶", 5));
+        StudentList.add(new Student("邓婉馨", 5));
+        StudentList.add(new Student("赵辰逸", 4));
+        StudentList.add(new Student("邓诗彤", 4));
+        StudentList.add(new Student("戴艺璇", 4));
+        StudentList.add(new Student("唐嘉良", 4));
+        StudentList.add(new Student("施乐之", 4));
+        StudentList.add(new Student("王玄同", 4));
+        StudentList.add(new Student("李昊阳", 3));
+        StudentList.add(new Student("钱浩宣", 3));
+        StudentList.add(new Student("战以诺", 3));
+        StudentList.add(new Student("于子轩", 3));
+        StudentList.add(new Student("王一诺", 3));
+        StudentList.add(new Student("杨子妍", 3));
+        StudentList.add(new Student("吕冠伯", 3));
     }
 
     public static void initPracticalLifeData() throws Exception {
@@ -260,11 +275,40 @@ public class ReadPdfInfo {
         LanguageList.add("讲故事");
     }
 
+    public static void initMathematicsData3Age() throws Exception {
+        MathematicsList3Age.add("数棒");
+        MathematicsList3Age.add("数字砂板");
+        MathematicsList3Age.add("数棒和数字的结合");
+        MathematicsList3Age.add("纺锤棒盒");
+        MathematicsList3Age.add("数字与筹码");
+        MathematicsList3Age.add("物体篮（实物/数字)");
+        MathematicsList3Age.add("数字游戏");
+    }
+
+    public static void initMathematicsData4Age() throws Exception {
+        //4岁
+        MathematicsList4Age.add("塞根板1");
+        MathematicsList4Age.add("塞根板2");
+        MathematicsList4Age.add("平方链");
+        //4-5岁
+        MathematicsList4Age.add("立方链");
+        MathematicsList4Age.add("加法蛇游戏");
+        MathematicsList4Age.add("彩色串珠盒");
+        MathematicsList4Age.add("划卡游戏");
+        MathematicsList4Age.add("凑十游戏");
+        MathematicsList4Age.add("兑换游戏");
+        MathematicsList4Age.add("取量游戏");
+        MathematicsList4Age.add("分数小人");
+        MathematicsList4Age.add("邮票游戏");
+        MathematicsList4Age.add("手指板游戏");
+    }
+
     public static void initMathematicsData() throws Exception {
         //口语和听力的开发
         //在这个层次有很多工作可以做：聊天、讲故事、诗歌、童谣……
 
         //数字认读
+        //all
         MathematicsList.add("数棒");
         MathematicsList.add("数字砂板");
         MathematicsList.add("数棒和数字的结合");
@@ -272,9 +316,11 @@ public class ReadPdfInfo {
         MathematicsList.add("数字与筹码");
         MathematicsList.add("物体篮（实物/数字)");
         MathematicsList.add("数字游戏");
+        //4岁
         MathematicsList.add("塞根板1");
         MathematicsList.add("塞根板2");
         MathematicsList.add("平方链");
+        //4-5岁
         MathematicsList.add("立方链");
         MathematicsList.add("加法蛇游戏");
         MathematicsList.add("彩色串珠盒");
@@ -297,16 +343,16 @@ public class ReadPdfInfo {
         CultureList.add("彩色地球仪");
         CultureList.add("世界地图");
         CultureList.add("认识宇宙");
-        CultureList.add("介绍太阳系");
-        CultureList.add("制作太阳系");
-        CultureList.add("制作自己想象的星系");
-        CultureList.add("地球内部结构介绍");
-        CultureList.add("介绍太阳");
-        CultureList.add("介绍月球");
-        CultureList.add("人造卫星的介绍");
-        CultureList.add("自己制作人造卫星");
-        CultureList.add("介绍木星");
-        CultureList.add("介绍土星");
+        CultureList.add("介绍世界七大洲");
+        CultureList.add("介绍中国");
+        CultureList.add("制作彩色地球仪");
+        CultureList.add("制作砂纸地球仪");
+        CultureList.add("制作世界地图");
+        CultureList.add("绘制中国地图");
+        CultureList.add("介绍北京");
+        CultureList.add("在地图中找到我在的位置");
+        CultureList.add("介绍美国，法国");
+        CultureList.add("认识国旗");
     }
 
     public static void initObservationData() throws Exception {
@@ -318,6 +364,8 @@ public class ReadPdfInfo {
         String filePath = "/Users/shimanqiang/Downloads";
         //filePath = "E:\\meituan\\demo\\anna-biz\\src\\main\\resources";
         filePath = "E:\\meituan\\study-demo\\src\\main\\resources";
+        filePath = "E:\\mystudy\\study-demo\\src\\main\\resources";
+
         String fileName = "主班教学双周计划.pdf";
         String targetFileName = target + ".pdf";
 
