@@ -29,7 +29,7 @@ public class ReadPdfInfo {
         initData();
 
 
-        String baseTarget = "主班教学双周计划_" + "2019年9月_" + "1周_2周_";
+        String baseTarget = "主班教学双周计划_" + "2019年10月_" + "3周_4周_";
 
         int index = 0;
         List<Student> stdList = new ArrayList<>();
@@ -342,17 +342,37 @@ public class ReadPdfInfo {
         CultureList.add("砂纸地球仪");
         CultureList.add("彩色地球仪");
         CultureList.add("世界地图");
-        CultureList.add("认识宇宙");
-        CultureList.add("介绍世界七大洲");
-        CultureList.add("介绍中国");
-        CultureList.add("制作彩色地球仪");
-        CultureList.add("制作砂纸地球仪");
-        CultureList.add("制作世界地图");
-        CultureList.add("绘制中国地图");
-        CultureList.add("介绍北京");
-        CultureList.add("在地图中找到我在的位置");
-        CultureList.add("介绍美国，法国");
-        CultureList.add("认识国旗");
+        CultureList.add("介绍法国");
+        CultureList.add("认识法国国旗");
+        CultureList.add("感受法国地形");
+        CultureList.add("制作法国国旗");
+        CultureList.add("认识法国建筑");
+        CultureList.add("感受法国食物");
+        CultureList.add("感受法国服饰");
+        CultureList.add("感受法国香水");
+        CultureList.add("认知法国所在洲");
+        CultureList.add("感受法国文字");
+        CultureList.add("感受法国运动");
+
+//        CultureList.add("水陆模型");
+//        CultureList.add("马的拼图");
+//        CultureList.add("花的拼图");
+//        CultureList.add("冷热分类卡");
+//        CultureList.add("左右分类卡");
+//        CultureList.add("砂纸地球仪");
+//        CultureList.add("彩色地球仪");
+//        CultureList.add("世界地图");
+//        CultureList.add("认识宇宙");
+//        CultureList.add("介绍世界七大洲");
+//        CultureList.add("介绍中国");
+//        CultureList.add("制作彩色地球仪");
+//        CultureList.add("制作砂纸地球仪");
+//        CultureList.add("制作世界地图");
+//        CultureList.add("绘制中国地图");
+//        CultureList.add("介绍北京");
+//        CultureList.add("在地图中找到我在的位置");
+//        CultureList.add("介绍美国，法国");
+//        CultureList.add("认识国旗");
     }
 
     public static void initObservationData() throws Exception {
