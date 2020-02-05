@@ -24,32 +24,20 @@ public class TwoNumPlusTest {
         Node n1_1_1 = new Node(2);
         n1.next = n1_1;
         n1_1.next = n1_1_1;
-        twoNumPlusTest.print(n1);
+        n1.print();
 
         Node n2 = new Node(2);
         Node n2_1 = new Node(5);
         Node n2_1_1 = new Node(1);
         n2.next = n2_1;
         n2_1.next = n2_1_1;
-        twoNumPlusTest.print(n2);
+        n2.print();
 
         //3,7,2
         //2,5,1
         //target: 5,2,4
         Node node = twoNumPlusTest.twoNumPlus(n1, n2);
-        twoNumPlusTest.print(node);
-    }
-
-    private void print(Node node) {
-        do {
-            System.out.print(node.val);
-            if (node.hasNext()) {
-                System.out.print("->");
-            } else {
-                System.out.println();
-            }
-            node = node.next;
-        } while (node != null);
+        node.print();
     }
 
     private Node twoNumPlus(Node n1, Node n2) {
@@ -76,18 +64,5 @@ public class TwoNumPlusTest {
             tmp.next = new Node(carry);
         }
         return r.next;
-    }
-
-    static class Node {
-        public int val;
-        public Node next;
-
-        public Node(int val) {
-            this.val = val;
-        }
-
-        public boolean hasNext() {
-            return next != null;
-        }
     }
 }
