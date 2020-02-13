@@ -88,7 +88,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.21</version>
         </dependency>
 
         <!--netty-->
@@ -134,6 +133,11 @@
 
 
         <!--pdf box begin-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.pdfbox</groupId>-->
+            <!--<artifactId>pdfbox-app</artifactId>-->
+            <!--<version>${pdfbox.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
@@ -163,11 +167,6 @@
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox-debugger</artifactId>
             <version>${pdfbox.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>jempbox</artifactId>
-            <version>1.8.16</version>
         </dependency>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
