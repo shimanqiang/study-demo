@@ -1,5 +1,7 @@
 package me.shimanqiang.leetcode;
 
+import me.shimanqiang.model.ListNode;
+
 import java.util.function.Supplier;
 
 /**
@@ -19,16 +21,16 @@ public class TwoNumPlusTest {
         Supplier<TwoNumPlusTest> supplier = TwoNumPlusTest::new;
         TwoNumPlusTest twoNumPlusTest = supplier.get();
 
-        Node n1 = new Node(3);
-        Node n1_1 = new Node(7);
-        Node n1_1_1 = new Node(2);
+        ListNode n1 = new ListNode(3);
+        ListNode n1_1 = new ListNode(7);
+        ListNode n1_1_1 = new ListNode(2);
         n1.next = n1_1;
         n1_1.next = n1_1_1;
         n1.print();
 
-        Node n2 = new Node(2);
-        Node n2_1 = new Node(5);
-        Node n2_1_1 = new Node(1);
+        ListNode n2 = new ListNode(2);
+        ListNode n2_1 = new ListNode(5);
+        ListNode n2_1_1 = new ListNode(1);
         n2.next = n2_1;
         n2_1.next = n2_1_1;
         n2.print();
@@ -36,13 +38,13 @@ public class TwoNumPlusTest {
         //3,7,2
         //2,5,1
         //target: 5,2,4
-        Node node = twoNumPlusTest.twoNumPlus(n1, n2);
-        node.print();
+        ListNode listNode = twoNumPlusTest.twoNumPlus(n1, n2);
+        listNode.print();
     }
 
-    private Node twoNumPlus(Node n1, Node n2) {
-        Node r = new Node(0);
-        Node tmp = r;
+    private ListNode twoNumPlus(ListNode n1, ListNode n2) {
+        ListNode r = new ListNode(0);
+        ListNode tmp = r;
         int carry = 0;
         while (n1 != null || n2 != null) {
             int x = 0, y = 0;
@@ -57,11 +59,11 @@ public class TwoNumPlusTest {
             int sum = x + y + carry;
             carry = sum / 10;
             int v = sum % 10;
-            tmp.next = new Node(v);
+            tmp.next = new ListNode(v);
             tmp = tmp.next;
         }
         if (carry > 0) {
-            tmp.next = new Node(carry);
+            tmp.next = new ListNode(carry);
         }
         return r.next;
     }
