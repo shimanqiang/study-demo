@@ -1,5 +1,7 @@
 package me.shimanqiang.leetcode;
 
+import me.shimanqiang.model.ListNode;
+
 /**
  * https://www.nowcoder.com/discuss/198840?type=1
  *
@@ -9,17 +11,17 @@ package me.shimanqiang.leetcode;
 public class PrintLinkedListFromTailToHead {
 
     public static void main(String[] args) {
-        Node head = initData();
+        ListNode head = initData();
         head.print();
         head.printNodeFromTailToHead();
     }
 
 
-    private static Node initData() {
-        Node head = new Node(0);
-        Node tmp = head;
+    private static ListNode initData() {
+        ListNode head = new ListNode(0);
+        ListNode tmp = head;
         for (int i = 1; i < 5; i++) {
-            tmp.next = new Node(i);
+            tmp.next = new ListNode(i);
             tmp = tmp.next;
         }
         return head;
