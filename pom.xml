@@ -220,6 +220,21 @@
             <artifactId>hadoop-client</artifactId>
             <version>3.2.1</version>
         </dependency>
+
+
+        <!-- java object layout java内存布局 -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-cli</artifactId>
+            <version>0.10</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
