@@ -1,4 +1,4 @@
-package me.shimanqiang.arithmetic;
+package me.shimanqiang.arithmetic.sort;
 
 import java.util.Arrays;
 

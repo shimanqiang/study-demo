@@ -10,7 +10,10 @@ public class HeapSort extends AbstractSort {
     protected void sort(int[] arr) {
         int len = arr.length;
         //https://blog.csdn.net/weixin_30553065/article/details/99537126
-        //找到非叶子节点（最后一个叶子节点的索引值是n-1，它的父节点索引值是[(n-1)-1]/2 = n/2 -1）
+        /**
+         * 找到非叶子节点（最后一个叶子节点的索引值是n-1，它的父节点索引值是[(n-1)-1]/2 = n/2 -1）
+         * 即：n/2-1
+         */
         int notLeaf = len / 2 - 1;
         //构建大顶堆（升序）
         for (int i = notLeaf; i >= 0; i--) {

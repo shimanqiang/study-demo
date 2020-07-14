@@ -17,28 +17,30 @@ public class Solution001 {
         new WorkThread(vowel).start();
         new WorkThread(consonant).start();
     }
-}
 
-class WorkThread extends Thread {
-    private static volatile char next = 'a';
-    char[] data;
-    int index = 0;
 
-    public WorkThread(char[] data) {
-        this.data = data;
-    }
+    static class WorkThread extends Thread {
+        private static volatile char next = 'a';
+        char[] data;
+        int index = 0;
 
-    @Override
-    public void run() {
-        while (data.length > index) {
-            char tmp = data[index];
-            if (next == tmp) {
-                System.out.println(next);
-                index++;
-                next++;
+        public WorkThread(char[] data) {
+            this.data = data;
+        }
+
+        @Override
+        public void run() {
+            while (data.length > index) {
+                char tmp = data[index];
+                if (next == tmp) {
+                    System.out.println(next);
+                    index++;
+                    next++;
+                }
             }
         }
     }
+
 }
 
 
