@@ -9,11 +9,40 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] a = {33, 1, 2, 13, 4, 5, 36, 7, 8, 9};
+        int[] a = {4, 33, 1, 2, 13, 4, 5, 5, 36, 7, 8, 9};
         System.out.println(Arrays.toString(a));
-        quickSort3(a, 0, a.length - 1);
+        quickSort4(a, 0, a.length - 1);
         System.out.println(Arrays.toString(a));
     }
+
+    static void quickSort4(int[] target, int low, int high) {
+        if (low >= high) {
+            return;
+        }
+        int pivot = target[low];
+        int i = low;
+        int j = high;
+
+        while (i < j) {
+            while (i < j && pivot <= target[j]) {
+                j--;
+            }
+            while (i < j && pivot >= target[i]) {
+                i++;
+            }
+            if (i < j) {
+                int tmp = target[i];
+                target[i] = target[j];
+                target[j] = tmp;
+            }
+        }
+        target[low] = target[i];
+        target[i] = pivot;
+        quickSort4(target, low, i - 1);
+        quickSort4(target, i + 1, high);
+
+    }
+
 
     static void quickSort3(int[] target, int low, int high) {
         if (low >= high) {
